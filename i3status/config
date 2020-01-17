@@ -1,0 +1,26 @@
+order += "disk /"
+order += "wireless wlp7s0"
+order += "cpu_temperature 0"
+order += "memory"
+order += "tztime local"
+
+disk "/" {
+	format = "  %used (%avail)/ %total  "
+}
+
+wireless wlp7s0 {
+        format_up = "  W: (%quality at %essid, %bitrate) %ip  "
+        format_down = "  W: down  "
+}
+
+cpu_temperature 0 {
+	format = "  %degrees C  "
+}
+
+memory {
+        format ="  MEM: %used / %total  "
+}
+
+tztime local {
+        format = "  %Y-%m-%d %H:%M:%S  "
+}
